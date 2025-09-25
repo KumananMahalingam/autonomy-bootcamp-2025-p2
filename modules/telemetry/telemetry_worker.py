@@ -4,6 +4,7 @@ Telemtry worker that gathers GPS data.
 
 import os
 import pathlib
+import time
 
 from pymavlink import mavutil
 
@@ -18,13 +19,15 @@ from ..common.modules.logger import logger
 # =================================================================================================
 def telemetry_worker(
     connection: mavutil.mavfile,
-    args,  # Place your own arguments here
-    # Add other necessary worker arguments here
+    queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Worker process.
 
-    args... describe what the arguments are
+    queue is where the worker will communicate the status
+    connection is the connection to the drone
+    controller is how the communication happens
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -48,8 +51,23 @@ def telemetry_worker(
     # =============================================================================================
     # Instantiate class object (telemetry.Telemetry)
 
+    result, telemetry_obj = telemetry.Telemetry.create(
+        connection=connection, local_logger=local_logger
+    )
+    if not result:
+        local_logger.error("Failed to create telemetry object")
+        return
+
     # Main loop: do work.
 
+    while not controller.is_exit_requested():
+        data = telemetry_obj.run()
+        local_logger.info(f"Telemetry data queued: {data}", True)
+        queue.queue.put(data)
+
+        time.sleep(0.01)
+
+    local_logger.info("Worker has stopped")
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑

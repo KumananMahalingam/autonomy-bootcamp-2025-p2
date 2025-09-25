@@ -18,13 +18,16 @@ from ..common.modules.logger import logger
 # =================================================================================================
 def heartbeat_receiver_worker(
     connection: mavutil.mavfile,
-    args,  # Place your own arguments here
-    # Add other necessary worker arguments here
+    queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Worker process.
 
     args... describe what the arguments are
+    queue is what will communicate the status
+    connection is what connects to the drone
+    controller allows for communication
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -35,7 +38,7 @@ def heartbeat_receiver_worker(
     process_id = os.getpid()
     result, local_logger = logger.Logger.create(f"{worker_name}_{process_id}", True)
     if not result:
-        print("ERROR: Worker failed to create logger")
+        print("Worker did not create logger")
         return
 
     # Get Pylance to stop complaining
@@ -48,7 +51,16 @@ def heartbeat_receiver_worker(
     # =============================================================================================
     # Instantiate class object (heartbeat_receiver.HeartbeatReceiver)
 
+    result, receiver = heartbeat_receiver.HeartbeatReceiver.create(connection, local_logger)
+
+    if not result:
+        local_logger.error("Failed to create Heartbeat receiver object")
+
     # Main loop: do work.
+    while not controller.is_exit_requested():
+        receiver.run()
+        status = receiver.status
+        queue.queue.put(status)
 
 
 # =================================================================================================

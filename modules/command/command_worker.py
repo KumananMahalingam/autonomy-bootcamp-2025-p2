@@ -19,7 +19,9 @@ from ..common.modules.logger import logger
 def command_worker(
     connection: mavutil.mavfile,
     target: command.Position,
-    args,  # Place your own arguments here
+    data_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
     # Add other necessary worker arguments here
 ) -> None:
     """
@@ -49,9 +51,21 @@ def command_worker(
     # =============================================================================================
     # Instantiate class object (command.Command)
 
+    result, command_object = command.Command.create(
+        connection=connection, target=target, local_logger=local_logger
+    )
+    if not result:
+        local_logger.error("Failed to create command object")
+        return
+
     # Main loop: do work.
 
+    while not controller.is_exit_requested():
+        tel_data = data_queue.queue.get()
+        msg = command_object.run(tel_data)
+        output_queue.queue.put(msg)
 
+    local_logger.info("Command worker has stopped", True)
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
 # =================================================================================================
