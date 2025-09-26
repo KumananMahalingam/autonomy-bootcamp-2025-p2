@@ -50,18 +50,16 @@ def command_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (command.Command)
-
     result, command_object = command.Command.create(
         connection=connection, target=target, local_logger=local_logger
     )
-    
     if not result:
         local_logger.error("Failed to create command object")
         return
 
     # Main loop: do work.
-
     while not controller.is_exit_requested():
+        controller.check_pause()
         tel_data = data_queue.queue.get()
         msg = command_object.run(tel_data)
         output_queue.queue.put(msg)

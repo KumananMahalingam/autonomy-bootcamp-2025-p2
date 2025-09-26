@@ -5,7 +5,6 @@ Decision-making logic.
 import math
 
 from pymavlink import mavutil
-
 from ..common.modules.logger import logger
 from ..telemetry import telemetry
 
@@ -74,17 +73,6 @@ class Command:  # pylint: disable=too-many-instance-attributes
         """
         Make a decision based on received telemetry data.
         """
-        # Log average velocity for this trip so far
-
-        # Use COMMAND_LONG (76) message, assume the target_system=1 and target_componenet=0
-        # The appropriate commands to use are instructed below
-
-        # Adjust height using the comand MAV_CMD_CONDITION_CHANGE_ALT (113)
-        # String to return to main: "CHANGE_ALTITUDE: {amount you changed it by, delta height in meters}"
-
-        # Adjust direction (yaw) using MAV_CMD_CONDITION_YAW (115). Must use relative angle to current state
-        # String to return to main: "CHANGING_YAW: {degree you changed it by in range [-180, 180]}"
-        # Positive angle is counter-clockwise as in a right handed system
 
         self.time += 1
         self.x_velo += data.x_velocity
