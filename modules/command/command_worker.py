@@ -54,6 +54,7 @@ def command_worker(
     result, command_object = command.Command.create(
         connection=connection, target=target, local_logger=local_logger
     )
+    
     if not result:
         local_logger.error("Failed to create command object")
         return
