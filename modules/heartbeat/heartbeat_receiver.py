@@ -22,7 +22,6 @@ class HeartbeatReceiver:
     def create(
         cls,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
     ) -> "tuple[True, HeartbeatReceiver] | tuple[False, None]":
         """

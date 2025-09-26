@@ -37,7 +37,6 @@ class Command:  # pylint: disable=too-many-instance-attributes
         cls,
         connection: mavutil.mavfile,
         target: Position,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
     )  -> "tuple[True, Command] | tuple[False, None]":
         """
@@ -55,7 +54,6 @@ class Command:  # pylint: disable=too-many-instance-attributes
         key: object,
         connection: mavutil.mavfile,
         target: Position,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
     ) -> None:
         assert key is Command.__private_key, "Use create() method"
