@@ -34,8 +34,8 @@ class HeartbeatReceiver:
                 local_logger
             )
             return True, heartbeat_receiver
-        except Exception as e:
-            local_logger.error(f"Failed to create HeartbeatReceiver object: {e}", True)
+        except Exception as exception:
+            local_logger.error(f"Failed to create HeartbeatReceiver object: {exception}", True)
             return False, None
 
     def __init__(
@@ -73,10 +73,10 @@ class HeartbeatReceiver:
                     f"Did not receive heartbeat. Count: {self.missed_heartbeats}", True
                 )
             if self.missed_heartbeats >= 5:
-                    self.status = "Disconnected"
+                self.status = "Disconnected"
 
-        except (OSError, mavutil.mavlink.MAVError) as e:
-            self.local_logger.error(f"Error while trying to receive message: {e}", True)
+        except (OSError, mavutil.mavlink.MAVError) as exception:
+            self.local_logger.error(f"Error while trying to receive message: {exception}", True)
 
         time.sleep(1)
 

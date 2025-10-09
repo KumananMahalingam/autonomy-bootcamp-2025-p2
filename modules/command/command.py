@@ -44,8 +44,8 @@ class Command:  # pylint: disable=too-many-instance-attributes
         try:
             command = cls(cls.__private_key, connection, target, local_logger)
             return True, command
-        except (OSError, mavutil.mavlink.MAVError) as e:
-            local_logger.error(f"Failed to create a Command object: {e}")
+        except (OSError, mavutil.mavlink.MAVError) as exception:
+            local_logger.error(f"Failed to create a Command object: {exception}")
             return False, None
 
     def __init__(
@@ -127,7 +127,6 @@ class Command:  # pylint: disable=too-many-instance-attributes
                 param7=0,
             )
             return f"YAW_CHANGE: {yaw_diff_deg}"
-
         return None
 
 # =================================================================================================

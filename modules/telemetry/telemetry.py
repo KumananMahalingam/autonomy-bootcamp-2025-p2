@@ -11,7 +11,8 @@ from ..common.modules.logger import logger
 
 class TelemetryData:  # pylint: disable=too-many-instance-attributes
     """
-    Python struct to represent Telemtry Data. Contains the most recent attitude and position reading.
+    Python struct to represent Telemtry Data. 
+    Contains the most recent attitude and position reading.
     """
 
     def __init__(
@@ -84,8 +85,8 @@ class Telemetry:
         try:
             telemetry = cls(cls.__private_key, connection, local_logger)
             return True, telemetry
-        except (OSError, mavutil.mavlink.MAVError) as e:
-            local_logger.error(f"Failed to create telemetry object: {e}")
+        except (OSError, mavutil.mavlink.MAVError) as exception:
+            local_logger.error(f"Failed to create telemetry object: {exception}")
             return False, None
 
     def __init__(
@@ -157,8 +158,8 @@ class Telemetry:
             self.last_pos = None
             return None
 
-        except (OSError, mavutil.mavlink.MAVError) as e:
-            self.local_logger.error(f"Error trying to create telemetry data object: {e}", True)
+        except (OSError, mavutil.mavlink.MAVError) as exception:
+            self.local_logger.error(f"Error trying to create telemetry data object: {exception}", True)
             return None
 
 # =================================================================================================

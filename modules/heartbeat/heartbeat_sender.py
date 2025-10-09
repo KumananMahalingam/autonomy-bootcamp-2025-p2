@@ -28,8 +28,8 @@ class HeartbeatSender:
         try:
             instance = cls(cls.__private_key, connection, local_logger)
             return True, instance
-        except (OSError, mavutil.mavlink.MAVError) as e:
-            local_logger.error(f"Did not create Heartbeat sender object: {e}")
+        except (OSError, mavutil.mavlink.MAVError) as exception:
+            local_logger.error(f"Did not create Heartbeat sender object: {exception}")
             return False, None
 
     def __init__(
@@ -41,7 +41,6 @@ class HeartbeatSender:
         assert key is HeartbeatSender.__private_key, "Use create() method"
 
         # Do any intializiation here
-
         self.connection = connection
         self.local_logger = local_logger
 
@@ -57,8 +56,8 @@ class HeartbeatSender:
                 mavutil.mavlink.MAV_TYPE_GCS, mavutil.mavlink.MAV_AUTOPILOT_INVALID, 0, 0, 0
             )
             local_logger.info("Heartbeat sent")
-        except (OSError, mavutil.mavlink.MAVError) as e:
-            local_logger.error(f"Did not send heartbeat: {e}")
+        except (OSError, mavutil.mavlink.MAVError) as exception:
+            local_logger.error(f"Did not send heartbeat: {exception}")
 
 
 # =================================================================================================
