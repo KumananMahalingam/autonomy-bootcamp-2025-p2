@@ -1,6 +1,7 @@
 """
 Heartbeat receiving logic.
 """
+# pylint: disable=duplicate-code
 
 import time
 from pymavlink import mavutil
@@ -34,7 +35,7 @@ class HeartbeatReceiver:
                 local_logger
             )
             return True, heartbeat_receiver
-        except Exception as exception:
+        except (OSError, mavutil.mavlink.MAVError) as exception:
             local_logger.error(f"Failed to create HeartbeatReceiver object: {exception}", True)
             return False, None
 

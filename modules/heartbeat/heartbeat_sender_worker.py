@@ -1,6 +1,7 @@
 """
 Heartbeat worker that sends heartbeats periodically.
 """
+# pylint: disable=duplicate-code
 
 import os
 import pathlib
@@ -54,7 +55,6 @@ def heartbeat_sender_worker(
         local_logger.error("Failed to create HeartbeatSender", True)
         return
 
-    
     while not controller.is_exit_requested():
         sender.run(local_logger=local_logger)
         time.sleep(1)

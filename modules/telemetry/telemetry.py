@@ -2,6 +2,8 @@
 Telemetry gathering logic.
 """
 
+# pylint: disable=duplicate-code,too-many-instance-attributes,too-few-public-methods
+
 import time
 
 from pymavlink import mavutil
@@ -9,10 +11,9 @@ from pymavlink import mavutil
 from ..common.modules.logger import logger
 
 
-class TelemetryData:  # pylint: disable=too-many-instance-attributes
+class TelemetryData: # pylint: disable=invalid-name
     """
-    Python struct to represent Telemtry Data. 
-    Contains the most recent attitude and position reading.
+    Telemetry data containing drone position, velocity, and attitude information.
     """
 
     def __init__(

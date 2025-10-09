@@ -54,12 +54,16 @@ def start_drone() -> None:
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 def stop(
+    data_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
     controller: worker_controller.WorkerController,
 ) -> None:
     """
     Stop the workers.
     """
     controller.request_exit()
+    data_queue.fill_and_drain_queue()
+    output_queue.fill_and_drain_queue()
 
 
 def read_queue(
