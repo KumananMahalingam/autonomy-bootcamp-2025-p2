@@ -57,7 +57,6 @@ class Command:
     ) -> None:
         assert key is Command.__private_key, "Use create() method"
 
-        # Do any intializiation here
         self.connection = connection
         self.target = target
         self.local_logger = local_logger
@@ -72,6 +71,7 @@ class Command:
     ) -> None:
         """
         Make a decision based on received telemetry data.
+
         """
 
         self.time += 1
@@ -82,6 +82,7 @@ class Command:
 
         self.local_logger.info(f"Average velocity: {avg_velo}")
 
+        # alt
         da = self.target.z - data.z 
         if abs(da) > 0.5:
             self.connection.mav.command_long_send(
@@ -130,6 +131,7 @@ class Command:
             return f"YAW_CHANGE: {yaw_diff_deg}"
         
         return None
+
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
