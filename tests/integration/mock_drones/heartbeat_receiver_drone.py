@@ -1,7 +1,6 @@
 """
 Mock drone for testing Heartbeat Receiver.
 """
-# pylint: disable=duplicate-code
 
 import os
 import pathlib

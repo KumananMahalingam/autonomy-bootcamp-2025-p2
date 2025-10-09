@@ -1,7 +1,6 @@
 """
 Heartbeat worker that sends heartbeats periodically.
 """
-# pylint: disable=duplicate-code
 
 import os
 import pathlib

@@ -1,7 +1,6 @@
 """
 Command worker to make decisions based on Telemetry Data.
 """
-# pylint: disable=duplicate-code
 
 import os
 import pathlib

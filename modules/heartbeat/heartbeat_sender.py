@@ -1,7 +1,6 @@
 """
 Heartbeat sending logic.
 """
-# pylint: disable=duplicate-code
 
 from pymavlink import mavutil
 from ..common.modules.logger import logger

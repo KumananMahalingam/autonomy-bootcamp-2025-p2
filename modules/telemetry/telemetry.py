@@ -2,8 +2,6 @@
 Telemetry gathering logic.
 """
 
-# pylint: disable=duplicate-code,too-many-instance-attributes,too-few-public-methods
-
 import time
 
 from pymavlink import mavutil
@@ -11,7 +9,7 @@ from pymavlink import mavutil
 from ..common.modules.logger import logger
 
 
-class TelemetryData: # pylint: disable=invalid-name
+class TelemetryData:
     """
     Telemetry data containing drone position, velocity, and attitude information.
     """

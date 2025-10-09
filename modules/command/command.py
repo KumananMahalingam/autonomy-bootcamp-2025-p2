@@ -1,7 +1,6 @@
 """
 Decision-making logic.
 """
-# pylint: disable=duplicate-code,too-few-public-methods
 
 import math
 
@@ -10,7 +9,7 @@ from ..common.modules.logger import logger
 from ..telemetry import telemetry
 
 
-class Position: # pylint: disable=invalid-name
+class Position: 
     """
     3D vector struct.
     """
@@ -24,7 +23,7 @@ class Position: # pylint: disable=invalid-name
 # =================================================================================================
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
-class Command:  # pylint: disable=too-many-instance-attributes
+class Command: 
     """
     Command class to make a decision based on recieved telemetry,
     and send out commands based upon the data.
@@ -83,7 +82,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
 
         self.local_logger.info(f"Average velocity: {avg_velo}")
 
-        da = self.target.z - data.z # pylint: disable=invalid-name
+        da = self.target.z - data.z 
         if abs(da) > 0.5:
             self.connection.mav.command_long_send(
                 target_system=1,
@@ -100,8 +99,8 @@ class Command:  # pylint: disable=too-many-instance-attributes
             )
 
             return f"ALT_CHANGE: {da}"
-        dx = self.target.x - data.x # pylint: disable=invalid-name
-        dy = self.target.y - data.y # pylint: disable=invalid-name
+        dx = self.target.x - data.x 
+        dy = self.target.y - data.y 
         desired_yaw = math.atan2(dy, dx)
         yaw_diff = desired_yaw - data.yaw
         yaw_diff = (yaw_diff + math.pi) % (2 * math.pi) - math.pi

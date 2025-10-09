@@ -2,8 +2,6 @@
 Telemtry worker that gathers GPS data.
 """
 
-# pylint: disable=duplicate-code
-
 import os
 import pathlib
 import time
