@@ -20,7 +20,7 @@ class HeartbeatSender:
     def create(
         cls,
         connection: mavutil.mavfile,
-        local_logger: logger.Logger,  # Put your own arguments here
+        local_logger: logger.Logger,
     ) -> "tuple[bool, HeartbeatSender | None]":
         """
         Falliable create (instantiation) method to create a HeartbeatSender object.
@@ -36,7 +36,7 @@ class HeartbeatSender:
         self,
         key: object,
         connection: mavutil.mavfile,
-        local_logger: logger.Logger,  # Put your own arguments here
+        local_logger: logger.Logger,
     ) -> None:
         assert key is HeartbeatSender.__private_key, "Use create() method"
 

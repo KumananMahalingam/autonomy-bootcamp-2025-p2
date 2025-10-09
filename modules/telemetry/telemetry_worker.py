@@ -50,7 +50,6 @@ def telemetry_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (telemetry.Telemetry)
-
     result, telemetry_obj = telemetry.Telemetry.create(
         connection=connection, local_logger=local_logger
     )

@@ -72,8 +72,8 @@ class HeartbeatReceiver:
                 self.local_logger.warning(
                     f"Did not receive heartbeat. Count: {self.missed_heartbeats}", True
                 )
-            if self.missed_heartbeats >= 5:
-                self.status = "Disconnected"
+                if self.missed_heartbeats >= 5:
+                    self.status = "Disconnected"
 
         except (OSError, mavutil.mavlink.MAVError) as exception:
             self.local_logger.error(f"Error while trying to receive message: {exception}", True)

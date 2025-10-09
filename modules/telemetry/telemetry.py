@@ -112,6 +112,7 @@ class Telemetry:
         # Read MAVLink message LOCAL_POSITION_NED (32)
         # Read MAVLink message ATTITUDE (30)
         # Return the most recent of both, and use the most recent message's timestamp
+        
         timeout = 1.0
         start = time.time()
 

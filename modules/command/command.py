@@ -99,6 +99,8 @@ class Command:
             )
 
             return f"ALT_CHANGE: {da}"
+        
+        # yaw
         dx = self.target.x - data.x 
         dy = self.target.y - data.y 
         desired_yaw = math.atan2(dy, dx)
@@ -126,6 +128,7 @@ class Command:
                 param7=0,
             )
             return f"YAW_CHANGE: {yaw_diff_deg}"
+        
         return None
 
 # =================================================================================================
