@@ -5,6 +5,7 @@ Test the telemetry worker with a mocked drone.
 import multiprocessing as mp
 import subprocess
 import threading
+from queue import Empty
 
 from pymavlink import mavutil
 
@@ -14,7 +15,6 @@ from modules.common.modules.read_yaml import read_yaml
 from modules.telemetry import telemetry_worker
 from utilities.workers import queue_proxy_wrapper
 from utilities.workers import worker_controller
-from queue import Empty
 
 
 MOCK_DRONE_MODULE = "tests.integration.mock_drones.telemetry_drone"

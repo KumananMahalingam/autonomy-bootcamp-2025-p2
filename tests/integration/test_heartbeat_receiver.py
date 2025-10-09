@@ -1,10 +1,12 @@
 """
 Test the heartbeat reciever worker with a mocked drone.
 """
+# pylint: disable=duplicate-code
 
 import multiprocessing as mp
 import subprocess
 import threading
+from queue import Empty
 
 from pymavlink import mavutil
 
@@ -14,7 +16,6 @@ from modules.common.modules.read_yaml import read_yaml
 from modules.heartbeat import heartbeat_receiver_worker
 from utilities.workers import queue_proxy_wrapper
 from utilities.workers import worker_controller
-from queue import Empty
 
 
 MOCK_DRONE_MODULE = "tests.integration.mock_drones.heartbeat_receiver_drone"
