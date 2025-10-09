@@ -1,7 +1,6 @@
 """
 Test the heartbeat reciever worker with a mocked drone.
 """
-# pylint: disable=duplicate-code
 
 import multiprocessing as mp
 import subprocess
