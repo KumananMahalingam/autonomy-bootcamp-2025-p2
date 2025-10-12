@@ -7,7 +7,6 @@ import pathlib
 import time
 
 from pymavlink import mavutil
-
 from utilities.workers import queue_proxy_wrapper
 from utilities.workers import worker_controller
 from . import telemetry
@@ -58,8 +57,8 @@ def telemetry_worker(
         return
 
     # Main loop: do work.
-
     while not controller.is_exit_requested():
+        controller.check_pause()
         data = telemetry_obj.run()
         local_logger.info(f"Telemetry data queued: {data}", True)
         queue.queue.put(data)

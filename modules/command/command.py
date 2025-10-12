@@ -9,7 +9,7 @@ from ..common.modules.logger import logger
 from ..telemetry import telemetry
 
 
-class Position: 
+class Position:
     """
     3D vector struct.
     """
@@ -23,7 +23,7 @@ class Position:
 # =================================================================================================
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
-class Command: 
+class Command:
     """
     Command class to make a decision based on recieved telemetry,
     and send out commands based upon the data.
@@ -71,8 +71,8 @@ class Command:
     ) -> None:
         """
         Make a decision based on received telemetry data.
-
         """
+
 
         self.time += 1
         self.x_velo += data.x_velocity
@@ -83,7 +83,7 @@ class Command:
         self.local_logger.info(f"Average velocity: {avg_velo}")
 
         # alt
-        da = self.target.z - data.z 
+        da = self.target.z - data.z
         if abs(da) > 0.5:
             self.connection.mav.command_long_send(
                 target_system=1,
@@ -100,10 +100,10 @@ class Command:
             )
 
             return f"ALT_CHANGE: {da}"
-        
+
         # yaw
-        dx = self.target.x - data.x 
-        dy = self.target.y - data.y 
+        dx = self.target.x - data.x
+        dy = self.target.y - data.y
         desired_yaw = math.atan2(dy, dx)
         yaw_diff = desired_yaw - data.yaw
         yaw_diff = (yaw_diff + math.pi) % (2 * math.pi) - math.pi
@@ -129,7 +129,7 @@ class Command:
                 param7=0,
             )
             return f"YAW_CHANGE: {yaw_diff_deg}"
-        
+
         return None
 
 

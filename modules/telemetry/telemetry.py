@@ -96,7 +96,6 @@ class Telemetry:
     ) -> None:
         assert key is Telemetry.__private_key, "Use create() method"
 
-        # Do any intializiation here
         self.connection = connection
         self.local_logger = local_logger
         self.last_pos = None
@@ -112,7 +111,7 @@ class Telemetry:
         # Read MAVLink message LOCAL_POSITION_NED (32)
         # Read MAVLink message ATTITUDE (30)
         # Return the most recent of both, and use the most recent message's timestamp
-        
+
         timeout = 1.0
         start = time.time()
 
@@ -161,6 +160,7 @@ class Telemetry:
         except (OSError, mavutil.mavlink.MAVError) as exception:
             self.local_logger.error(f"Error trying to create telemetry data object: {exception}", True)
             return None
+
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑

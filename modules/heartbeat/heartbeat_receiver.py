@@ -4,7 +4,6 @@ Heartbeat receiving logic.
 
 import time
 from pymavlink import mavutil
-
 from ..common.modules.logger import logger
 
 
@@ -28,14 +27,10 @@ class HeartbeatReceiver:
         Falliable create (instantiation) method to create a HeartbeatReceiver object.
         """
         try:
-            heartbeat_receiver = HeartbeatReceiver(
-                cls.__private_key,
-                connection,
-                local_logger
-            )
-            return True, heartbeat_receiver
-        except (OSError, mavutil.mavlink.MAVError) as exception:
-            local_logger.error(f"Failed to create HeartbeatReceiver object: {exception}", True)
+            receiver = cls(cls.__private_key, connection, local_logger)
+            return True, receiver
+        except (OSError, mavutil.mavlink.MAVError) as e:
+            local_logger.error(f"Failed to create Heartbeat receiver object: {e}")
             return False, None
 
     def __init__(
@@ -46,21 +41,17 @@ class HeartbeatReceiver:
     ) -> None:
         assert key is HeartbeatReceiver.__private_key, "Use create() method"
 
-        # Do any intializiation here
         self.connection = connection
         self.local_logger = local_logger
         self.missed_heartbeats = 0
         self.status = "Disconnected"
 
-    def run(
-        self,
-    ) -> None:
+    def run(self) -> None:
         """
         Attempt to recieve a heartbeat message.
         If disconnected for over a threshold number of periods,
         the connection is considered disconnected.
         """
-
         try:
             msg = self.connection.recv_match(type="HEARTBEAT", blocking=False)
 
@@ -72,6 +63,7 @@ class HeartbeatReceiver:
                 self.local_logger.warning(
                     f"Did not receive heartbeat. Count: {self.missed_heartbeats}", True
                 )
+
                 if self.missed_heartbeats >= 5:
                     self.status = "Disconnected"
 
@@ -79,7 +71,6 @@ class HeartbeatReceiver:
             self.local_logger.error(f"Error while trying to receive message: {exception}", True)
 
         time.sleep(1)
-
 
 
 # =================================================================================================

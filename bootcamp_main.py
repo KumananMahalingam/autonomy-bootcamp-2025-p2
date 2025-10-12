@@ -41,7 +41,6 @@ NUM_TELEMETRY = 1
 NUM_COMMAND = 1
 
 # Any other constants
-
 TARGET = command.Position(10, 10, 10)
 
 # =================================================================================================
@@ -168,22 +167,19 @@ def main() -> int:
         local_logger=main_logger,
     )
 
-
-    # Start worker processes
     if not result:
         return -1
     assert main_worker_manager is not None
 
+    # Start worker processes
     main_worker_manager.start_workers()
     main_logger.info("Started workers")
 
     # Main's work: read from all queues that output to main, and log any commands that we make
     # Continue running for 100 seconds or until the drone disconnects
-
     start_time = time.time()
     queues = [receiver_queue, telemetry_queue, command_queue]
 
-    # Stop the processes
     while time.time() - start_time < 100 and connection.target_system != 0:
         for output in queues:
             while True:
@@ -193,23 +189,22 @@ def main() -> int:
 
                     if msg == "Disconnected":
                         break
+
                 except Empty:
                     break
         time.sleep(1)
 
+    # Stop the processes
     main_controller.request_exit()
     main_logger.info("Requested exit")
 
     # Fill and drain queues from END TO START
-
     receiver_queue.fill_and_drain_queue()
     telemetry_queue.fill_and_drain_queue()
     command_queue.fill_and_drain_queue()
-
     main_logger.info("Queues cleared")
 
     # Clean up worker processes
-
     main_worker_manager.join_workers()
     main_logger.info("Stopped")
 
