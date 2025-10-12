@@ -102,7 +102,7 @@ class Telemetry:
         self.last_attitude = None
 
     def run(
-        self
+        self,
     ) -> TelemetryData | None:
         """
         Receive LOCAL_POSITION_NED and ATTITUDE messages from the drone,
