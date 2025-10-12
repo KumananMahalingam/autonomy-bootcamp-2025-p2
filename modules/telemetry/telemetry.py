@@ -84,8 +84,8 @@ class Telemetry:
         try:
             telemetry = cls(cls.__private_key, connection, local_logger)
             return True, telemetry
-        except (OSError, mavutil.mavlink.MAVError) as exception:
-            local_logger.error(f"Failed to create telemetry object: {exception}")
+        except (OSError, mavutil.mavlink.MAVError) as e:
+            local_logger.error(f"Failed to create telemetry object: {e}")
             return False, None
 
     def __init__(
@@ -102,7 +102,7 @@ class Telemetry:
         self.last_attitude = None
 
     def run(
-        self,
+        self
     ) -> TelemetryData | None:
         """
         Receive LOCAL_POSITION_NED and ATTITUDE messages from the drone,
@@ -157,8 +157,8 @@ class Telemetry:
             self.last_pos = None
             return None
 
-        except (OSError, mavutil.mavlink.MAVError) as exception:
-            self.local_logger.error(f"Error trying to create telemetry data object: {exception}", True)
+        except (OSError, mavutil.mavlink.MAVError) as e:
+            self.local_logger.error(f"Error trying to create telemetry data object: {e}", True)
             return None
 
 
