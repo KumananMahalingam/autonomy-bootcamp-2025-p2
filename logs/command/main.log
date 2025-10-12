@@ -1,0 +1,33 @@
+17:17:58: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
+17:17:58: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | main | 126] Connected!
+17:17:58: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] ALT_CHANGE: 1
+17:17:58: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] ALT_CHANGE: -1
+17:17:59: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] None
+17:17:59: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] None
+17:18:00: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] None
+17:18:00: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] None
+17:18:01: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] None
+17:18:01: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] YAW_CHANGE: 63.43494882292201
+17:18:02: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] YAW_CHANGE: 90.0
+17:18:02: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] YAW_CHANGE: 116.56505117707799
+17:18:03: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] YAW_CHANGE: 45.0
+17:18:03: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] YAW_CHANGE: 63.43494882292201
+17:18:04: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] YAW_CHANGE: 90.0
+17:18:04: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] YAW_CHANGE: 26.565051177077994
+17:18:05: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] YAW_CHANGE: 45.0
+17:18:05: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] YAW_CHANGE: 90.0
+17:18:06: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] YAW_CHANGE: 45.0
+17:18:06: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] YAW_CHANGE: 90.0
+17:18:07: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] YAW_CHANGE: 135.0
+17:18:07: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] YAW_CHANGE: -26.565051177077994
+17:18:08: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] YAW_CHANGE: -45.0
+17:18:08: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] YAW_CHANGE: -90.0
+17:18:09: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] YAW_CHANGE: -45.0
+17:18:09: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] YAW_CHANGE: -90.0
+17:18:10: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] YAW_CHANGE: -135.0
+17:18:10: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] YAW_CHANGE: -63.43494882292201
+17:18:11: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] YAW_CHANGE: -90.0
+17:18:11: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] YAW_CHANGE: -116.56505117707799
+17:18:12: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] YAW_CHANGE: -45.00000000000005
+17:18:12: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] YAW_CHANGE: -63.43494882292201
+17:18:13: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 74] YAW_CHANGE: -90.0
