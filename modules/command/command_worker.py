@@ -65,6 +65,8 @@ def command_worker(
         output_queue.queue.put(msg)
 
     local_logger.info("Command worker has stopped", True)
+
+
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
 # =================================================================================================

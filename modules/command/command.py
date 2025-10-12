@@ -37,7 +37,7 @@ class Command:
         connection: mavutil.mavfile,
         target: Position,
         local_logger: logger.Logger,
-    )  -> "tuple[True, Command] | tuple[False, None]":
+    ) -> "tuple[True, Command] | tuple[False, None]":
         """
         Falliable create (instantiation) method to create a Command object.
         """
@@ -71,8 +71,8 @@ class Command:
     ) -> None:
         """
         Make a decision based on received telemetry data.
-        """
 
+        """
 
         self.time += 1
         self.x_velo += data.x_velocity
