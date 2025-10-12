@@ -11,7 +11,7 @@ from ..common.modules.logger import logger
 
 class TelemetryData:
     """
-    Telemetry data containing drone position, velocity, and attitude information.
+    Python struct to represent Telemtry Data. Contains the most recent attitude and position reading.
     """
 
     def __init__(
