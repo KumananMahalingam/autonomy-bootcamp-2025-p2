@@ -52,9 +52,11 @@ def heartbeat_sender_worker(
 
     if not result:
         local_logger.error("Failed to create HeartbeatSender", True)
+        return
 
     while not controller.is_exit_requested():
-        sender.run(local_logger=local_logger)
+        controller.check_pause()
+        sender.run(local_logger)
         time.sleep(1)
 
 

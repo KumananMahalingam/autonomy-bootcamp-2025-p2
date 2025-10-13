@@ -50,12 +50,14 @@ def start_drone() -> None:
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 def stop(
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
     controller: worker_controller.WorkerController,
 ) -> None:
     """
     Stop the workers.
     """
     controller.request_exit()
+    output_queue.fill_and_drain_queue()
 
 
 def read_queue(
@@ -68,8 +70,6 @@ def read_queue(
     while True:
         try:
             status = output_queue.queue.get(timeout=1)
-            if status == "stop":
-                break
             main_logger.info(f"Queue status: {status}")
         except (OSError, ValueError, EOFError, Empty):
             continue

@@ -1,0 +1,23 @@
+21:19:27: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
+21:19:27: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | main | 116] Connected!
+21:19:28: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 73] Queue status: Disconnected
+21:19:29: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 73] Queue status: Connected
+21:19:30: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 73] Queue status: Connected
+21:19:31: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 73] Queue status: Connected
+21:19:32: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 73] Queue status: Connected
+21:19:33: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 73] Queue status: Connected
+21:19:34: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 73] Queue status: Connected
+21:19:35: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 73] Queue status: Connected
+21:19:36: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 73] Queue status: Connected
+21:19:37: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 73] Queue status: Connected
+21:19:38: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 73] Queue status: Disconnected
+21:19:39: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 73] Queue status: Disconnected
+21:19:40: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 73] Queue status: Disconnected
+21:19:41: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 73] Queue status: Connected
+21:19:42: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 73] Queue status: Connected
+21:19:43: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 73] Queue status: Connected
+21:19:44: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 73] Queue status: Connected
+21:19:45: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 73] Queue status: Connected
+21:19:46: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 73] Queue status: Connected
+21:19:47: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 73] Queue status: Connected
+21:19:48: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 73] Queue status: Connected
