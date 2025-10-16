@@ -57,16 +57,19 @@ def stop(controller: worker_controller.WorkerController) -> None:
 def read_queue(
     queue: queue_proxy_wrapper.QueueProxyWrapper,
     main_logger: logger.Logger,
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Read and print the output queue.
     """
-    while True:
+    while not controller.is_exit_requested():
         try:
-            data = queue.queue.get(timeout=2)
-            main_logger.info(f"Received data: {data}", True)
-        except (OSError, ValueError, EOFError, Empty):
-            break
+            telemetry_data = queue.queue.get(block=True, timeout=5)
+            if not telemetry_data:
+                continue
+            main_logger.info(f"New Telemetry Data: {telemetry_data}")
+        except (AssertionError, TypeError, AttributeError):
+            main_logger.error("error in reading queue")
 
 
 # =================================================================================================

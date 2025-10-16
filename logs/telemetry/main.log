@@ -1,6 +1,6 @@
-20:25:44: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
-20:25:45: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | main | 110] Connected!
-20:25:45: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
+14:58:08: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
+14:58:08: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | main | 110] Connected!
+14:58:08: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
             time_since_boot: 0,
             x: 0.0,
             y: 0.0,
@@ -15,7 +15,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-20:25:45: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
+14:58:08: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
             time_since_boot: 500,
             x: 0.5,
             y: 0.0,
@@ -30,7 +30,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-20:25:46: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
+14:58:09: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
             time_since_boot: 1000,
             x: 1.0,
             y: 0.0,
@@ -45,7 +45,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-20:25:46: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
+14:58:09: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
             time_since_boot: 1500,
             x: 1.5,
             y: 0.0,
@@ -60,7 +60,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-20:25:47: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
+14:58:10: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
             time_since_boot: 2000,
             x: 2.0,
             y: 0.0,
@@ -75,7 +75,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-20:25:47: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
+14:58:10: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
             time_since_boot: 2500,
             x: 2.5,
             y: 0.0,
@@ -90,7 +90,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-20:25:48: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
+14:58:11: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
             time_since_boot: 3000,
             x: 3.0,
             y: 0.0,
@@ -105,7 +105,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-20:25:48: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
+14:58:11: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
             time_since_boot: 3500,
             x: 3.5,
             y: 0.0,
@@ -120,7 +120,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-20:25:49: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
+14:58:12: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
             time_since_boot: 4000,
             x: 4.0,
             y: 0.0,
@@ -135,7 +135,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-20:25:49: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
+14:58:12: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
             time_since_boot: 4500,
             x: 4.5,
             y: 0.0,
@@ -150,10 +150,10 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-20:25:50: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: None
-20:25:51: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: None
-20:25:52: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: None
-20:25:53: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
+14:58:13: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: None
+14:58:14: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: None
+14:58:15: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: None
+14:58:16: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
             time_since_boot: 0,
             x: 0.0,
             y: 0.0,
@@ -168,7 +168,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-20:25:53: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
+14:58:16: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
             time_since_boot: 500,
             x: 0.3333333432674408,
             y: 0.0,
@@ -183,7 +183,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-20:25:54: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
+14:58:17: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
             time_since_boot: 1000,
             x: 0.6666666865348816,
             y: 0.0,
@@ -198,7 +198,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-20:25:54: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
+14:58:17: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
             time_since_boot: 1500,
             x: 1.3333333730697632,
             y: 0.0,
@@ -213,7 +213,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-20:25:55: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
+14:58:18: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
             time_since_boot: 2000,
             x: 1.6666666269302368,
             y: 0.0,
@@ -228,7 +228,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-20:25:55: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
+14:58:18: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
             time_since_boot: 2500,
             x: 2.3333332538604736,
             y: 0.0,
@@ -243,7 +243,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-20:25:56: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
+14:58:19: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
             time_since_boot: 3000,
             x: 2.6666667461395264,
             y: 0.0,
@@ -258,7 +258,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-20:25:56: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
+14:58:19: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
             time_since_boot: 3500,
             x: 3.3333332538604736,
             y: 0.0,
@@ -273,7 +273,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-20:25:57: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
+14:58:20: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
             time_since_boot: 4000,
             x: 3.6666667461395264,
             y: 0.0,
@@ -288,7 +288,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-20:25:57: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
+14:58:20: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: {
             time_since_boot: 4500,
             x: 4.333333492279053,
             y: 0.0,
@@ -303,4 +303,4 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-20:25:58: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: None
+14:58:22: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 67] Received data: None

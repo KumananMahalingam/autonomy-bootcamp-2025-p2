@@ -61,18 +61,22 @@ def stop(
 
 
 def read_queue(
-    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    connection_status_queue: queue_proxy_wrapper.QueueProxyWrapper,
     main_logger: logger.Logger,
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Read and print the output queue.
     """
-    while True:
+    while not controller.is_exit_requested():
         try:
-            status = output_queue.queue.get(timeout=1)
-            main_logger.info(f"Queue status: {status}")
-        except (OSError, ValueError, EOFError, Empty):
-            continue
+            connection_status = connection_status_queue.queue.get(block=True)
+            if not connection_status:
+                continue
+            main_logger.info(f"Drone connection status: {connection_status}")
+
+        except (AssertionError, TypeError, AttributeError):
+            main_logger.error("error in reading queue")
 
 
 # =================================================================================================

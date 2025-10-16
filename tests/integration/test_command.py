@@ -67,15 +67,22 @@ def stop(
 
 
 def read_queue(
-    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    command_queue: queue_proxy_wrapper.QueueProxyWrapper,
     main_logger: logger.Logger,
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Read and print the output queue.
     """
-    while True:
-        msg = output_queue.queue.get()
-        main_logger.info(msg)
+    while not controller.is_exit_requested():
+        try:
+            command_string = command_queue.queue.get(block=True, timeout=5)
+            if not command_string:
+                continue
+            main_logger.info(command_string)
+
+        except (AssertionError, TypeError, AttributeError):
+            main_logger.error("error in reading queue")
 
 
 def put_queue(
