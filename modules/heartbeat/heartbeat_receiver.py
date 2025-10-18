@@ -2,7 +2,6 @@
 Heartbeat receiving logic.
 """
 
-import time
 from pymavlink import mavutil
 from ..common.modules.logger import logger
 
