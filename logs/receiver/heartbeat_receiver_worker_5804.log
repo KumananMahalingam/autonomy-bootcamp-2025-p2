@@ -1,0 +1,22 @@
+00:45:21: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 47] Logger initialized
+00:45:21: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 72] Received heartbeat from drone
+00:45:22: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 72] Received heartbeat from drone
+00:45:23: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 72] Received heartbeat from drone
+00:45:24: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 72] Received heartbeat from drone
+00:45:25: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 72] Received heartbeat from drone
+00:45:26: [WARNING] [/home/kumananm/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Did not receive heartbeat from drone
+00:45:27: [WARNING] [/home/kumananm/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Did not receive heartbeat from drone
+00:45:29: [WARNING] [/home/kumananm/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Did not receive heartbeat from drone
+00:45:30: [WARNING] [/home/kumananm/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Did not receive heartbeat from drone
+00:45:31: [WARNING] [/home/kumananm/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Did not receive heartbeat from drone
+00:45:32: [WARNING] [/home/kumananm/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Did not receive heartbeat from drone
+00:45:33: [WARNING] [/home/kumananm/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Did not receive heartbeat from drone
+00:45:34: [WARNING] [/home/kumananm/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Did not receive heartbeat from drone
+00:45:34: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 72] Received heartbeat from drone
+00:45:35: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 72] Received heartbeat from drone
+00:45:36: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 72] Received heartbeat from drone
+00:45:37: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 72] Received heartbeat from drone
+00:45:38: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 72] Received heartbeat from drone
+00:45:39: [WARNING] [/home/kumananm/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Did not receive heartbeat from drone
+00:45:40: [INFO] [/home/kumananm/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 72] Received heartbeat from drone
+00:45:41: [WARNING] [/home/kumananm/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Did not receive heartbeat from drone

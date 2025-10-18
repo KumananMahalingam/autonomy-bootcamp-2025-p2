@@ -43,8 +43,7 @@ class HeartbeatReceiver:
 
         self.connection = connection
         self.local_logger = local_logger
-        self.missed_heartbeats = 0
-        self.status = "Disconnected"
+        self.last_5_heartbeats = [False, False, False, False, False]
 
     def run(self) -> None:
         """
@@ -53,24 +52,29 @@ class HeartbeatReceiver:
         the connection is considered disconnected.
         """
         try:
-            msg = self.connection.recv_match(type="HEARTBEAT", blocking=False)
+            msg = self.connection.recv_match(type="HEARTBEAT", blocking=True, timeout=1.1)
 
-            if msg is not None:
-                self.missed_heartbeats = 0
-                self.status = "Connected"
-            else:
-                self.missed_heartbeats += 1
-                self.local_logger.warning(
-                    f"Did not receive heartbeat. Count: {self.missed_heartbeats}", True
-                )
+            # Remove oldest heartbeat record
+            self.last_5_heartbeats.pop(0)
 
-                if self.missed_heartbeats >= 5:
-                    self.status = "Disconnected"
+            # If no heartbeat received in 1.1 seconds
+            if not msg:
+                self.last_5_heartbeats.append(False)
+                self.local_logger.warning("Did not receive heartbeat from drone")
 
-        except (OSError, mavutil.mavlink.MAVError) as exception:
-            self.local_logger.error(f"Error while trying to receive message: {exception}", True)
+                # Check if there is no record of the drone being connected in last 5 checks
+                if True not in self.last_5_heartbeats:
+                    return (True, "Disconnected")
+                return (True, "Connected")
 
-        time.sleep(1)
+            # If heartbeat received
+            self.last_5_heartbeats.append(True)
+            self.local_logger.info("Received heartbeat from drone")
+            return (True, "Connected")
+
+        except (OSError, mavutil.mavlink.MAVError) as e:
+            self.local_logger.error(f"heartbeat_receiver.py failed to receive heartbeat: {e}")
+            return (False, None)
 
 
 # =================================================================================================

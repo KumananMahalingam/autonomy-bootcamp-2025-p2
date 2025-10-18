@@ -140,10 +140,10 @@ def main() -> int:
     ).start()
 
     # Read the main queue (worker outputs)
-    threading.Thread(target=read_queue, args=(output_queue, main_logger)).start()
+    threading.Thread(target=read_queue, args=(output_queue, main_logger, controller)).start()
 
     heartbeat_receiver_worker.heartbeat_receiver_worker(
-        connection=connection, queue=output_queue, controller=controller
+        connection=connection, output_queue=output_queue, controller=controller
     )
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
